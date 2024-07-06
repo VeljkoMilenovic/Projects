@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobilni Shop</title>
+    <link rel="website icon" type="png" href="imgs/ikonica.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <img src="imgs/mobileworld-high-resolution-logo-transparent.png" alt="logo" class="logo">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <div class="search-bar">
+                    <input class="form-control" type="text" placeholder="Pretražite mobilne telefone...">
+                </div>
+            </li>
+        </ul>
+        <div class="cart">
+            <a class="nav-link" href="pocetna.html">Početna</a>
+        </div>
+        <div class="cart">
+            <a class="nav-link" href="korpa.html">Pregled korpe</a>
+        </div>
+    </nav>
+    <label for="telefoni"><b>Izaberite marku telefona: </b></label>
+    <select id="marka" name="telefoni" onchange="updateModel()">
+        <option value="0">Izaberite marku</option>
+        <option value="iphone">iPhone</option>
+        <option value="samsung">Samsung</option>
+        <option value="xiaomi">Xiaomi</option>
+        <option value="google">Google</option>
+        <option value="honor">Honor</option>
+        <option value="huawei">Huawei</option>
+    </select>
+    <div class="podnaslov">KOMPLETNA PONUDA TELEFONA</div>
+
+    <div class="container" id="telefoniContainer">
+
+    </div>
+
+
+    <div class="container" id="telefoni">
+
+        <div class="col-lg-3">
+            <div class="phone-card" data-name="iPhone 15 Pro Max">
+                <div class="gore">
+                    <img src="imgs/iphone-15-pro-max,-256gb,-black-titanium.png" alt="iPhone15ProMax" id="slika1">
+                    <h3 id="naslov1">iPhone 15 Pro Max, 256gb, Black Titanium</h3>
+                    <p class="price">720€</p>
+                </div>
+                <div class="actions" id="prvi">
+                    <input type="number" name="quantity" value="0" min="0">
+                    <button onclick="addToCart(this)">Dodaj u korpu</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="phone-card" data-name="Xiaomi 13">
+                <div class="gore">
+                    <img src="imgs/xiaomi-13,-8-256gb,-light-green.png" alt="samsungS23Ultra">
+                    <h3>XIAOMI 13, 8/256gb, Light Green</h3>
+                    <p class="price">600€</p>
+                </div>
+                <div class="actions">
+                    <input type="number" name="quantity" value="0" min="0">
+                    <button onclick="addToCart(this)">Dodaj u korpu</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="phone-card" data-name="iPhone 15">
+                <div class="gore">
+                    <img src="imgs/iphone-15,-128gb,-black-titanium.png" alt="samsungS23Ultra">
+                    <h3>iPhone 15, 128GB, Black Titanium </h3>
+                    <p class="price">850€</p>
+                </div>
+                <div class="actions">
+                    <input type="number" name="quantity" value="0" min="0">
+                    <button onclick="addToCart(this)">Dodaj u korpu</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="phone-card" data-name="Samsung Galaxy A54">
+                <div class="gore">
+                    <img src="imgs/samsung-galaxy-a54-5g,-8-256gb,-light-green.png " alt="samsungS23Ultra">
+                    <h3>Samsung Galaxy A54 5G, 8/256gb, Green </h3>
+                    <p class="price">400€</p>
+                </div>
+                <div class="actions">
+                    <input type="number" name="quantity" value="0" min="0">
+                    <button onclick="addToCart(this)">Dodaj u korpu</button>
+                </div>
+            </div>
+        </div>
+            <div class="col-lg-3">
+                <div class="phone-card" data-name="Samsung Galaxy S23 Ultra">
+                    <div class="gore">
+                        <img src="imgs/samsung-s23-ultra,-8-256gb,-white.png" alt="samsungS23Ultra">
+                        <h3>SAMSUNG S23 Ultra, 8/256gb, White </h3>
+                        <p class="price">990€</p>
+                    </div>
+                    <div class="actions">
+                        <input type="number" name="quantity" value="0" min="0">
+                        <button onclick="addToCart(this)">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="phone-card" data-name="Huawei P60 Pro">
+                    <div class="gore">
+                        <img src="imgs/huawei-p60-pro,-8-256gb,-glass-black.png" alt="samsungS23Ultra">
+                        <h3>HUAWEI P60 Pro, 8/256gb, Glass Black</h3>
+                        <p class="price">550€</p>
+                    </div>
+                    <div class="actions">
+                        <input type="number" name="quantity" value="0" min="0">
+                        <button onclick="addToCart(this)">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="phone-card" data-name="Google Pixel 8 Pro">
+                    <div class="gore">
+                        <img src="imgs/google-pixel-8-pro,-12-256gb,-blue.png" alt="samsungS23Ultra">
+                        <h3>GOOGLE Pixel 8 Pro, 12/256gb, Blue </h3>
+                        <p class="price">999€</p>
+                    </div>
+                    <div class="actions">
+                        <input type="number" name="quantity" value="0" min="0">
+                        <button onclick="addToCart(this)">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="phone-card" data-name="Honor Magic 5 Lite">
+                    <div class="gore">
+                        <img src="imgs/honor-magic5-lite,-8-256gb,-midnight-black.png" alt="samsungS23Ultra">
+                        <h3>HONOR Magic5 Lite, 8/256GB, Midnight Green</h3>
+                        <p class="price">350€</p>
+                    </div>
+                    <div class="actions">
+                        <input type="number" name="quantity" value="0" min="0">
+                        <button onclick="addToCart(this)">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+        
+       
+            <div class="col-lg-3">
+                <div class="phone-card" data-name="Samsung Galaxy Z Fold2">
+                    <div class="gore">
+                        <img src="imgs/samsung-galaxy-z-fold2-5g,-256gb,-mystic-bronze.png" alt="iPhone15ProMax"
+                            id="slika1">
+                        <h3 id="naslov1">SAMSUNG Galaxy Z Fold2 5g, 256gb, Mystic Bronze</h3>
+                        <p class="price">420€</p>
+                    </div>
+                    <div class="actions" id="prvi">
+                        <input type="number" name="quantity" value="0" min="0">
+                        <button onclick="addToCart(this)">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="phone-card" data-name="Samsung Galaxy S23 Plus">
+                    <div class="gore">
+                        <img src="imgs/samsung-galaxy-s23-plus-5g,-8-512gb,-phantom-black.png" alt="samsungS23Ultra">
+                        <h3>SAMSUNG Galaxy S23 Plus 5G, 8/512GB, Phantom Black</h3>
+                        <p class="price">700€</p>
+                    </div>
+                    <div class="actions">
+                        <input type="number" name="quantity" value="0" min="0">
+                        <button onclick="addToCart(this)">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="phone-card" data-name="iPhone 14 Pro Max">
+                    <div class="gore">
+                        <img src="imgs/iphone-14-pro-max-256gb,-deep-purple.png" alt="samsungS23Ultra">
+                        <h3>iPhone 14 Pro Max 256gb, Deep Purple</h3>
+                        <p class="price">880€</p>
+                    </div>
+                    <div class="actions">
+                        <input type="number" name="quantity" value="0" min="0">
+                        <button onclick="addToCart(this)">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="phone-card" data-name="XIAOMI 13 Lite">
+                    <div class="gore">
+                        <img src="imgs/xiaomi-13-lite,-8-256gb,-sky-blue.png" alt="samsungS23Ultra">
+                        <h3>XIAOMI 13 Lite, 8/256gb, Sky Blue </h3>
+                        <p class="price">410€</p>
+                    </div>
+                    <div class="actions">
+                        <input type="number" name="quantity" value="0" min="0">
+                        <button onclick="addToCart(this)">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+       
+       
+            <div class="col-lg-3">
+                <div class="phone-card" data-name="XIAOMI 13 Pro">
+                    <div class="gore">
+                        <img src="imgs/xiaomi-13-pro,-12-512gb,-white.png" alt="iPhone15ProMax" id="slika1">
+                        <h3 id="naslov1">XIAOMI 13 Pro, 12/512gb, White</h3>
+                        <p class="price">1080€</p>
+                    </div>
+                    <div class="actions" id="prvi">
+                        <input type="number" name="quantity" value="0" min="0">
+                        <button onclick="addToCart(this)">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="phone-card" data-name="XIAOMI 13">
+                    <div class="gore">
+                        <img src="imgs/xiaomi-13,-8-256gb,-light-green.png" alt="samsungS23Ultra">
+                        <h3>XIAOMI 13, 8/256gb, Light Green</h3>
+                        <p class="price">600€</p>
+                    </div>
+                    <div class="actions">
+                        <input type="number" name="quantity" value="0" min="0">
+                        <button onclick="addToCart(this)">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="phone-card" data-name="HUAWEI Mate 50 Pro">
+                    <div class="gore">
+                        <img src="imgs/huawei-mate-50-pro,-8-256gb,-silver.png" alt="samsungS23Ultra">
+                        <h3>HUAWEI Mate 50 Pro, 8/256gb, Silver </h3>
+                        <p class="price">905€</p>
+                    </div>
+                    <div class="actions">
+                        <input type="number" name="quantity" value="0" min="0">
+                        <button onclick="addToCart(this)">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="phone-card" data-name="HUAWEI Nova 9">
+                    <div class="gore">
+                        <img src="imgs/huawei-nova-9,-8-128gb,-blue.png" alt="samsungS23Ultra">
+                        <h3>HUAWEI Nova 9, 8/128gb, Blue</h3>
+                        <p class="price">360€</p>
+                    </div>
+                    <div class="actions">
+                        <input type="number" name="quantity" value="0" min="0">
+                        <button onclick="addToCart(this)">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+        
+        
+            <div class="col-lg-3">
+                <div class="phone-card" data-name="GOOGLE Pixel 7 Pro">
+                    <div class="gore">
+                        <img src="imgs/google-pixel-7-pro,-8-128gb,-snow-white.png" alt="iPhone15ProMax" id="slika1">
+                        <h3 id="naslov1">GOOGLE Pixel 7 Pro, 8/128gb, Snow White</h3>
+                        <p class="price">530€</p>
+                    </div>
+                    <div class="actions" id="prvi">
+                        <input type="number" name="quantity" value="0" min="0">
+                        <button onclick="addToCart(this)">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="phone-card" data-name="GOOGLE Pixel 7a">
+                    <div class="gore">
+                        <img src="imgs/google-pixel-7a,-8-256gb,-obsidian-black.png" alt="samsungS23Ultra">
+                        <h3>GOOGLE Pixel 7a, 8/256gb, Obsidian Black</h3>
+                        <p class="price">510€</p>
+                    </div>
+                    <div class="actions">
+                        <input type="number" name="quantity" value="0" min="0">
+                        <button onclick="addToCart(this)">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="phone-card" data-name="HONOR X8">
+                    <div class="gore">
+                        <img src="imgs/honor-x8,-6-128gb,-midnight-black.png" alt="samsungS23Ultra">
+                        <h3>HONOR X8, 6/128gb, Midnight Black</h3>
+                        <p class="price">240€</p>
+                    </div>
+                    <div class="actions">
+                        <input type="number" name="quantity" value="0" min="0">
+                        <button onclick="addToCart(this)">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="phone-card" data-name="iPhone 13 Pro">
+                    <div class="gore">
+                        <img src="imgs/iphone-13-pro,-128gb,-green.png" alt="samsungS23Ultra">
+                        <h3>iPhone 13 Pro, 128GB, Green</h3>
+                        <p class="price">710€</p>
+                    </div>
+                    <div class="actions">
+                        <input type="number" name="quantity" value="0" min="0">
+                        <button onclick="addToCart(this)">Dodaj u korpu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart">
+
+                <div class="cart-items"></div>
+
+                <div class="total"></div>
+            </div>
+        
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>O Nama</h2>
+                <p>Mi smo sajt namenjen prodaji mobilnih telefona.</p>
+            </div>
+            <div class="footer-section contact">
+                <h2>Kontaktirajte nas</h2>
+                <p>Email: mobilewolrd@gmail.com</p>
+                <p>Telefon: +123 456 789</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Korisni linkovi</h2>
+                <ul>
+                    <li><a href="#">Početna</a></li>
+                    <li><a href="#">Kompletna p</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 Mobile World. Sva prava zadržana.
+        </div>
+    </footer>
+    <script src="jquery-3.7.1.js"></script>
+    <script src="js.js"></script>
+</body>
+
+</html>
